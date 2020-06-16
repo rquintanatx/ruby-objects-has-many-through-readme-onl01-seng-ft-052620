@@ -18,6 +18,10 @@ class Waiter
     most_tip_meal.customer
   end 
   
+  def worst_tipped_meal
+    meals.min {|a,b| a.tip <=> b.tip}
+  end 
+  
   def new_meal(customer, total, tip = 0)
     Meal.new(self, customer, total, tip)
   end
