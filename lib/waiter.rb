@@ -18,7 +18,8 @@ class Waiter
   end 
   
   def new_meal(customer, total, tip = 0)
-    Meal.new(self, customer, total, tip)
+    most_tip_meal = Meal.new(self, customer, total, tip)
+    most_tip_meal.customer
   end
   
   def self.all
