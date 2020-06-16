@@ -10,7 +10,7 @@ class Customer
   end 
   
   def meals
-    Meal.all select {|meal| meal.customer}
+    Meal.all select {|meal| meal.customer == self}
   end 
   
   def new_meal(waiter, total, tip = 0)
