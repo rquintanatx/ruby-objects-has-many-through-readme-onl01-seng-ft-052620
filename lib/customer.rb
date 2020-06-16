@@ -13,6 +13,8 @@ class Customer
     Meal.all select {|meal| meal.customer == self}
   end 
   
+  def waiters
+  
   def new_meal(waiter, total, tip = 0)
     Meal.new(waiter, self, total, tip)
   end 
